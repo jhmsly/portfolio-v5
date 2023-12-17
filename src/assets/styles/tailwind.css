@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    text-rendering: optimizeLegibility;
+
+    @apply subpixel-antialiased;
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    // Type Checking
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+
+    // Modules
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@/component/*": ["./src/components/*"],
+      "@/config/*": ["./src/config/*"],
+      "@/lib/*": ["./src/lib/*"]
+    },
+    "resolveJsonModule": true,
+
+    // Emit
+    "noEmit": true,
+    "removeComments": true,
+
+    // JavaScript Support
+    "allowJs": false,
+
+    // Editor Support
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+
+    // Interop Constraints
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+
+    // Language and Environment
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es6",
+
+    // Completeness
+    "skipLibCheck": true,
+
+    // Projects
+    "incremental": true
+  }
+}
